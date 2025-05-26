@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The HealthPrime website focuses on healthcare products, including:
+Medical Devices: Thermometers, blood pressure monitors, etc.
+Personal Care Products: Face masks, sanitizers, etc.
+Supplements: Vitamins, minerals, and wellness boosters.
+Skincare and Wellness Items: Aloe vera gel, essential oils, etc.
+It is not limited to medicines but instead provides a wide range of healthcare and wellness solutions for customers -->
+<healthprime>
+    <product>
+        <product_id>HP001</product_id>
+        <product_name>Digital Thermometer</product_name>
+        <category>Medical Devices</category>
+        <price>299</price>
+        <description>Accurate digital thermometer for measuring body temperature.</description>
+        <image_url>https://healthprime.com/images/digital-thermometer.jpg</image_url>
+    </product>
+    
+    <product>
+        <product_id>HP002</product_id>
+        <product_name>Vitamin C Tablets</product_name>
+        <category>Supplements</category>
+        <price>499</price>
+        <description>Boosts immunity with 1000mg Vitamin C per tablet.</description>
+        <image_url>https://healthprime.com/images/vitamin-c-tablets.jpg</image_url>
+    </product>
+    
+    <product>
+        <product_id>HP003</product_id>
+        <product_name>Face Mask (Pack of 50)</product_name>
+        <category>Personal Care</category>
+        <price>399</price>
+        <description>Disposable 3-ply face masks for protection and safety.</description>
+        <image_url>https://healthprime.com/images/face-mask.jpg</image_url>
+    </product>
+    
+    <product>
+        <product_id>HP004</product_id>
+        <product_name>Blood Pressure Monitor</product_name>
+        <category>Medical Devices</category>
+        <price>1499</price>
+        <description>Automatic digital blood pressure monitor for home use.</description>
+        <image_url>https://healthprime.com/images/bp-monitor.jpg</image_url>
+    </product>
+    
+    <product>
+        <product_id>HP005</product_id>
+        <product_name>Aloe Vera Gel</product_name>
+        <category>Skincare</category>
+        <price>249</price>
+        <description>Pure aloe vera gel for skin hydration and soothing.</description>
+        <image_url>https://healthprime.com/images/aloe-vera-gel.jpg</image_url>
+    </product>
+</healthprime>

@@ -1,0 +1,34 @@
+{
+    "healthprime":{
+        "products":[
+            {
+                "product_id":"Hp101",
+                "product_name":"Digital Thermometer",
+                "category":"Medical Devices",
+                "product_price":209,
+                "description":"Accurate measures temprrature"
+            },
+            {
+                "product_id":"Hp102",
+                "product_name":"Vit C Capsuls",
+                "category":"Suppliments",
+                "product_price":305,
+                "description":"hlpful for face whitening"  
+            },
+            {
+                "product_id":"Hp103",
+                "product_name":"Digital Thermometer",
+                "category":"Medical Devices",
+                "product_price":206,
+                "description":"Accurate measures temprrature"
+            },
+            {
+            "product_id":"Hp104",
+            "product_name":"Digital Thermometer",
+            "category":"Medical Devices",
+            "product_price":459,
+            "description":"Accurate measures temprrature"
+            }
+        ]
+    }
+}

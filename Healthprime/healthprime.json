@@ -1,0 +1,46 @@
+{
+    "healthprime": {
+        "products": [
+            {
+                "product_id": "HP001",
+                "product_name": "Digital Thermometer",
+                "category": "Medical Devices",
+                "price": 299,
+                "description": "Accurate digital thermometer for measuring body temperature.",
+                "image_url": "https://healthprime.com/images/digital-thermometer.jpg"
+            },
+            {
+                "product_id": "HP002",
+                "product_name": "Vitamin C Tablets",
+                "category": "Supplements",
+                "price": 499,
+                "description": "Boosts immunity with 1000mg Vitamin C per tablet.",
+                "image_url": "https://healthprime.com/images/vitamin-c-tablets.jpg"
+            },
+            {
+                "product_id": "HP003",
+                "product_name": "Face Mask (Pack of 50)",
+                "category": "Personal Care",
+                "price": 399,
+                "description": "Disposable 3-ply face masks for protection and safety.",
+                "image_url": "https://healthprime.com/images/face-mask.jpg"
+            },
+            {
+                "product_id": "HP004",
+                "product_name": "Blood Pressure Monitor",
+                "category": "Medical Devices",
+                "price": 1499,
+                "description": "Automatic digital blood pressure monitor for home use.",
+                "image_url": "https://healthprime.com/images/bp-monitor.jpg"
+            },
+            {
+                "product_id": "HP005",
+                "product_name": "Aloe Vera Gel",
+                "category": "Skincare",
+                "price": 249,
+                "description": "Pure aloe vera gel for skin hydration and smoothing.",
+                "image_url": "https://healthprime.com/images/aloe-vera-gel.jpg"
+            }
+        ]
+    }
+}

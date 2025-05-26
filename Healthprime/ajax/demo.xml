@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<healthprime>
+<product>
+<product_id>HP101</product_id>
+<product_name>Thermometer</product_name>
+<category>Medical Devices</category>
+<price>450</price>
+<description>measuring temperature</description>
+</product>
+
+<product>
+<product_id>HP102</product_id>
+<product_name>Vit c capsules(pack of 2)</product_name>
+<category>Supplements</category>
+<price>467</price>
+<description>reduce tanings brighter skin</description>
+</product>
+
+
+<product>
+<product_id>HP103</product_id>
+<product_name>Blood pressure monitor</product_name>
+<category>Medical Devices</category>
+<price>390</price>
+<description>Measure blood pressure</description>
+</product>
+
+
+<product>
+<product_id>HP104</product_id>
+<product_name>Aloe aloe-vera-gel</product_name>
+<category>skin Care</category>
+<price>120</price>
+<description>pure Aloe vera jel skin hydration</description>
+</product>
+</healthprime>

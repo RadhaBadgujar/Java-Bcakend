@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <div id="output">
+        <p>Hello</p>
+        <h1>Learn Ajax t</h1>
+        <button>Click me</button>
+    </div>
+</body>
+<!-- <script>
+        $(document).ready(function(){
+        $("button").click(function(){
+            var data=new XMLHttpRequest();
+            data.open("GET","ajax.txt");
+            data.send();
+            data.onreadystatechange=function(){
+                if(this.readyState==4){
+                    $("div").append(this.responseText.replace(/\n/g,"<br>"));
+                }
+            }
+        })
+    })
+</script>  -->
+<!-- Fatch data from json -->
+<!-- <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var data= new XMLHttpRequest();
+            data.open("GET","demo.json");
+            data.send();
+            data.onreadystatechange=function(){
+                if(this.readyState==4){
+                  var  fetch_data=JSON.parse(this.responseText);
+                   var html_data="<table border=1>";
+html_data+="<tr> <th>product_id</th>  <th>product_name</th> <th>category</th> <th>product_price</th> <th>description</th> </tr>"
+            for(var i in  fetch_data.healthprime.products){
+                html_data+="<tr>"
+                html_data+="<td>"+fetch_data.healthprime.products[i].product_id+ "</td>"
+                html_data+="<td>"+fetch_data.healthprime.products[i].product_name+"</td>"
+                html_data+="<td>"+fetch_data.healthprime.products[i].category+"</td>"
+                html_data+="<td>"+fetch_data.healthprime.products[i].product_price+"</td>"
+                html_data+="<td>"+fetch_data.healthprime.products[i].description+"</td>"
+                     html_data+="</tr>"
+            }
+        }
+        html_data+="</table>"
+        $("div").html(html_data);
+      //  $("div").append(html_data);
+            }
+            
+        })
+    })
+  </script>  -->
+
+<!-- show data from xml -->
+<!-- <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var data=new XMLHttpRequest();
+            data.open("GET","demo.xml");
+            data.overrideMimeType("application/xml");
+            data.send();
+            data.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+console.log(this.responseText);
+console.log(this.responseXML);
+if(this.responseXML){
+    var html_data="";
+    $(this.responseXML).find("product").each(function(){
+
+        html_data+="<td>"+$(this).find(this.product_id).text()+"</td>";
+        html_data+="<td>"+$(this).find(this.product_name).text()+"</td>";
+        html_data+="<td>"+$(this).find(this.category).text()+"</td>";
+        html_data+="<td>"+$(this).find(this.price).text()+"</td>";
+        html_data+="<td>"+$(this).find(this.description).text()+"</td>";
+    });
+    $("#output").append(html_data);
+}
+                }
+            }
+        })
+    })
+  </script> -->
+
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            var data = new XMLHttpRequest();
+            data.open("GET", "demo.json");
+            data.send();
+            data.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                   console.log(this.responseText);
+                   console.log(this.responseXML);
+                   if(this.responseXML){
+                    var html_data="";
+                    $(this.responseXML).find("product").each(function(){
+                        html_data+="<td>"+$(this).find(this.product_id).text() +"</td>";
+                        html_data+="<td>"+$(this).find(this.product_name)+"</td>";
+                        html_data+="<td>"+$(this).find(this.category)+"</td>";
+                        html_data+="<td>"+$(this).find(this.price)+"</td>";
+                        html_data+="<td>"+$(this).find(this.description)+"</td>";
+                    });
+                    $("div").append(html_data);
+                   }
+                }
+            }
+        })
+    })
+</script>
+
+
+</html>

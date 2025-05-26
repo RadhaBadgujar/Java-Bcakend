@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery/jq/jquery-3.7.1.js"></script>
+    <style>
+        body{
+            background-color: rgb(252, 252, 208);
+        }
+        #output{
+background-color: antiquewhite;
+color: blue;
+border: 2px solid black;
+border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="output">
+        <h1>Welcome Dashboard Page</h1>
+        <p>Hello Aliens!! </p>
+    <button>Click Me</button>
+
+</div>
+</body>
+<!-- FETCH DATA FROM TEXT FILE -->
+<!-- <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+           var data=new XMLHttpRequest();
+           data.open("GET","ajaxdemo.txt");
+           data.send();
+           data.onreadystatechange=function(){
+            if(this.readyState==4){
+              //  $("div").append(  "<br>"+ this.responseText);
+              $("div").append(this.responseText.replace(/\n/g, "<br>"));
+            }
+           }
+                })
+    })
+</script>  -->
+
+
+
+<!-- --------------------------------------------------------------------------------- -->
+<!-- FETCH DATA from  JSON-->
+
+ <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var data = new XMLHttpRequest();
+            data.open("GET", "healthprime.json");  // Ensure json file is correct
+            data.send();
+            data.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    var fetch_data = JSON.parse(this.responseText);
+                    var html_data = "<table border='1'>"; // Open table
+                    
+  html_data += "<tr><th>Product ID</th><th>Product Name</th><th>Category</th><th>Price</th><th>Description</th><th>Image</th></tr>"; // Table Header
+                    
+                    for (var i in fetch_data.healthprime.products){  // Accessing healthprime.products
+                        html_data += "<tr>"; 
+                        html_data += "<td>" + fetch_data.healthprime.products[i].product_id + "</td>";
+                        html_data += "<td>" + fetch_data.healthprime.products[i].product_name + "</td>";
+                        html_data += "<td>" + fetch_data.healthprime.products[i].category + "</td>";
+                        html_data += "<td>₹" + fetch_data.healthprime.products[i].price + "</td>";
+                        html_data += "<td>" + fetch_data.healthprime.products[i].description + "</td>";
+                        html_data += "<td><img src='" + fetch_data.healthprime.products[i].image_url + "' width='100'></td>"; // Display product image
+                        html_data += "</tr>";
+                    }   
+                    html_data += "</table>"; // Close table
+                    $("div").append(html_data);
+                }
+            }
+        });
+    });
+    </script>
+    
+    <!-- FETCH DATA FROM XML -->
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var data = new XMLHttpRequest();
+                data.open("GET", "healthprime.xml", true);
+                data.overrideMimeType("application/xml"); // Important!
+                data.send();
+
+                data.onreadystatechange = function(){
+                    if(this.readyState === 4 && this.status === 200){
+                        console.log(this.responseText); // Debug raw response
+                        console.log(this.responseXML); // See if XML is null
+
+                        if (this.responseXML) { // Only proceed if XML is not null
+                            var html_data = "";
+                            $(this.responseXML).find("product").each(function(){
+                                html_data += '<div>Product ID: ' + $(this).find("product_id").text() + '</div>';
+                                html_data += '<div>Product Name: ' + $(this).find("product_name").text() + '</div>';
+                                html_data += '<div>Category: ' + $(this).find("category").text() + '</div>';
+                                html_data += '<div>Price: ₹' + $(this).find("price").text() + '</div>';
+                                html_data += '<div>Description: ' + $(this).find("description").text() + '</div>';
+                                html_data += '<hr>';
+                            });
+
+                            $("#output").append(html_data);
+                        } 
+                        // else {
+                        //     console.error("XML parsing failed. Check XML format or MIME type.");
+                        // }
+                    }
+                };
+            });
+        });
+    </script>
+
+</html>
+

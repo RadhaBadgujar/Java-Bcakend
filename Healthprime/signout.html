@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Out</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img4.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>You have successfully signed out!</h1>
+        <p>Thank you for visiting HealthPrime. We hope to see you again soon!</p>
+        <a href="login.html" id="loginLink">Login Again</a>
+        <div class="error" id="error-message"></div>
+        <a href="dashboard.html">Go to the Dashboard</a>
+    </div>
+
+    <script src="jquery/jq/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Simple validation to check if the link is clicked
+            $("#loginLink").on("click", function(event) {
+                // Check if the user has seen the message (simple validation)
+                var messageSeen = confirm("Have you seen the sign-out message?");
+                
+                if (!messageSeen) {
+                    // Show an error message if they haven't seen the message
+                    $("#error-message").text("Please confirm that you've seen the sign-out message.");
+                    event.preventDefault(); // Prevent the link from redirecting
+                } else {
+                    // Proceed to the login page if confirmed
+                    $("#error-message").text("");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
