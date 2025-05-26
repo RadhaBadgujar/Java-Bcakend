@@ -1,0 +1,6 @@
+INSERT INTO product (name, description, brand, price, category, product_available, release_date, stock_quantity) VALUES
+('Smartwatch Pro', 'Latest smartwatch with health tracking features', 'TechBrand', 7999.99, 'Electronics', true, '2025-04-01', 150),
+('Herbal Shampoo', 'Organic shampoo for hair fall control', 'NatureCare', 349.50, 'Personal Care', true, '2025-03-15', 200),
+('Vitamin D3 Tablets', 'Essential supplement for bone health', 'NutriLife', 599.00, 'Supplements', true, '2025-02-28', 500),
+('Digital Thermometer', 'Fast and accurate body temperature reading', 'MediCheck', 299.00, 'Medical Devices', true, '2025-01-20', 80),
+('Green Tea Bags', 'Antioxidant-rich green tea', 'WellnessBrew', 199.99, 'Wellness', true, '2025-03-01', 100);
